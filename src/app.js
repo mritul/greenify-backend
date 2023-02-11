@@ -14,6 +14,8 @@ app.use("/",require("./router/index"))
 app.use("/auth",require("./router/auth"))
 app.use("/api",require("./router/api"))
 
+
+mongoose.set("strictQuery", false);
 mongoose.connect(`mongodb://${process.env.DB_HOST}/${process.env.DB_NAME}`).then(()=>{
     app.listen(port,()=>{
         console.log("Server up and running at port " + port)

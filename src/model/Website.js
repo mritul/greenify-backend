@@ -6,9 +6,10 @@ const website = new mongoose.Schema({
         required:true,
     },
     bytes:{
-        type:Number,
+        type:[Number],
         required:true,
     },
+    visitTimes:[DateTime],
     emissions:{
         type:Number,
         required:true
